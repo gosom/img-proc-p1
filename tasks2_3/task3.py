@@ -2,8 +2,6 @@
 import argparse
 import sys
 
-import numpy as np
-
 from utils import (image2array, fft, plot, get_magnitude, get_phase,
                    image_from_mag_phase, prepare_show)
 

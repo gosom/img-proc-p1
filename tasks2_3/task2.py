@@ -2,8 +2,6 @@
 import argparse
 import sys
 
-import numpy as np
-
 from utils import (image2array, fft, plot, fftshift, prepare_show,
                   euclidean_distance)
 

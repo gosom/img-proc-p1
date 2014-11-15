@@ -35,10 +35,24 @@ def prepare_show(array, log=True):
 
 
 def plot(images):
-    cnt = 1
-    for img in images:
-        plt.subplot(2, 2, cnt)
+
+    def doplot(e):
+        cnt, img = e
+        plt.subplot(2, 2, cnt+1)
         plt.imshow(img, cmap='gray')
         plt.axis('off')
-        cnt+=1
+
+    map(doplot, [(i, img) for i, img in enumerate(images)])
     plt.show()
+
+
+def get_magnitude(data):
+    return (np.imag(data) ** 2 + np.real(data)**2) ** 0.5
+
+
+def get_phase(data):
+    return np.arctan2(np.imag(data), np.real(data))
+
+
+def image_from_mag_phase(ma, ph):
+    return ma * (np.cos(ph) + np.sin(ph)*1j)

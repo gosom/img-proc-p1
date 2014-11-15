@@ -56,6 +56,8 @@ def main():
     plot([aimg, prepare_show(shift_freq), prepare_show(shift_freq_cpy),
           prepare_show(output, False)])
 
+    return 0
+
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

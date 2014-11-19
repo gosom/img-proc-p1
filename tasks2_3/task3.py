@@ -8,8 +8,8 @@ from utils import (image2array, fft, plot, get_magnitude, get_phase,
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('img1', help=('Image1'))
-    parser.add_argument('img2', help=('Image2'))
+    parser.add_argument('img1', help=('Image1 - use magnitude'))
+    parser.add_argument('img2', help=('Image2 - use phase'))
 
     args = parser.parse_args()
 
